@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import Navbar from './components/Navbar.vue'
+import CardView from './components/Card/CardView.vue'
 
 </script>
 
@@ -15,6 +16,7 @@ import Navbar from './components/Navbar.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <CardView/>
 </template>
 
 <style scoped>
