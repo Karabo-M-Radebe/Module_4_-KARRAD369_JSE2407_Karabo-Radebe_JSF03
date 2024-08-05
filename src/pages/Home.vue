@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import CardView from '../components/Card/CardView.vue';
+</script>
 
-<template></template>
+<template>
+ <CardView />
+</template>
 
 <style></style>
