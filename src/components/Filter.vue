@@ -9,10 +9,17 @@
   
   const selectedCategory = ref(props.selectedCategory);
   
+  /**
+   * this function focuses on filtering the products by targeting the value of the categories 
+   * @param event 
+   */
   const handleChange = (event) => {
     props.onCategoryChange(event.target.value);
   };
   
+  /**
+   * this Vue hook allows the value of the selectedCategory to become reactive to the defined props
+   */
   watchEffect(() => {
     selectedCategory.value = props.selectedCategory;
   });

@@ -10,7 +10,10 @@
   const loading = ref(false);
   const id = route.params.id;
   
-  
+  /**
+   * this function fetches the data from each product via id 
+   * @param productId 
+   */
   const getProductDetails = async (productId) => {
     try {
       const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
@@ -24,6 +27,10 @@
     }
   };
   
+  /**
+   * this function uses the onMounted Vue hook that asynchronously awaits for the product detail function and sends out a loading state or an error, if api fetch fails     
+   */
+
   onMounted(async () => {
     loading.value = true;
     const { response, error: fetchError } = await getProductDetails(id);

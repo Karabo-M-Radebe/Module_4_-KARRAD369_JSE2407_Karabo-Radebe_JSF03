@@ -5,6 +5,11 @@
     onSortChange: { type: Function, required: true }
   });
   
+  
+  /**
+   * this function handles the sorting of the products by targeting the value of the price  
+   * @param event 
+   */
   const handleSortChange = (event) => {
     props.onSortChange(event.target.value);
   };

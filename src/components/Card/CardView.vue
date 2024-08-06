@@ -79,6 +79,9 @@
       const selectedCategory = ref('');
       const selectedSort = ref('default');
   
+      /**
+       * this function simply fetches all the data from the api  
+       */
       const getProducts = async () => {
         try {
           let response = await fetch('https://fakestoreapi.com/products');
@@ -96,6 +99,10 @@
         }
       };
   
+      /**
+       * this function fetches data from the api, specifically the categories of each product then filters and groups the products by category
+       * @param category 
+       */
       const getProductsByCategory = async (category) => {
         try {
           loading.value = true;
@@ -111,6 +118,10 @@
         }
       };
   
+      /**
+       * this function handles the category changes that take place when the selected category from the product data by calling the 'getProductsByCategory' function and parsing the value of the selectedCategory
+       * @param category 
+       */
       const handleCategoryChange = (category) => {
         selectedCategory.value = category;
         if (selectedCategory.value) {
@@ -120,6 +131,10 @@
         }
       };
   
+      /**
+       * the sortProducts function allows the option for sorting the values of the price data in order and vice versa when selected  
+       * @param option 
+       */
       const sortProducts = (option) => {
         selectedSort.value = option;
         if (option === 'lowToHigh') {
@@ -131,6 +146,10 @@
         }
       };
   
+      /**
+       * this function, by parsing the option parameter, handles the sorting of the products via price 
+       * @param option 
+       */
       const handleSortChange = (option) => {
         sortProducts(option);
       };

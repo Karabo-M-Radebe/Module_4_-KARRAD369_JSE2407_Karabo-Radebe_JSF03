@@ -3,7 +3,10 @@
 
     const isNavbarVisible = ref (false);
     
-      function toggleNavbar() {
+    /**
+     * this function simply toggles between the visibility of the navigation bar for different screen sizes 
+     */  
+    function toggleNavbar() {
         isNavbarVisible = !isNavbarVisible;
         }
 </script>
